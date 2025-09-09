@@ -36,7 +36,7 @@ ax.set_ylabel("y")
 ax.grid(True, linestyle=':', linewidth=0.5)
 
 # Save as SVG
-out_path = "/home/datalake/imgs/cluster_plot"
+out_path = "/home/data/imgs/cluster_plot"
 plt.savefig(out_path + ".svg", bbox_inches="tight")
 plt.savefig(out_path + ".pdf", bbox_inches="tight")
 # plt.show()
@@ -80,7 +80,7 @@ ax.set_ylabel("PC2")
 ax.grid(True, linestyle=":")
 
 # plt.show()
-out_path = "/home/datalake/imgs/embeddings_2d"
+out_path = "/home/data/imgs/embeddings_2d"
 plt.savefig(out_path + ".svg", bbox_inches="tight")
 plt.savefig(out_path + ".pdf", bbox_inches="tight")
 

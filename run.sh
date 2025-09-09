@@ -1,11 +1,6 @@
 #!/bin/bash
 set -exo
-
-echo "Running all Python scripts in alphabetical order..."
-
+cd /home
 for script in $(ls *.py | sort); do
-    echo ">>> Running $script"
     python "$script"
 done
-
-echo "All scripts completed."
