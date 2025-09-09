@@ -1,0 +1,9 @@
+services:
+  demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: demo
+    volumes:
+      - .:/home
+    command: bash build.sh
