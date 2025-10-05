@@ -96,7 +96,7 @@ def build_unified_clusters(cluster_file, output_dir="unified_clusters"):
 # -------------------------------
 # Example usage
 # -------------------------------
-cluster_file = "/home/data/silver/temp/cluster_schemas.json"  # generated earlier
-results = build_unified_clusters(cluster_file, output_dir="/home/data/silver/temp/unified_clusters")
+cluster_file = "/home/1-profiling/data/silver/temp/cluster_schemas.json"  # generated earlier
+results = build_unified_clusters(cluster_file, output_dir="/home/1-profiling/data/silver/temp/unified_clusters")
 print("\nSummary of unified clusters:")
 print(json.dumps(results, indent=4))

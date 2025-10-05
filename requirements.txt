@@ -19,3 +19,4 @@ sentence_transformers==5.1.0
 ultralytics==8.3.204
 opencv-python==4.12.0.88
 tqdm==4.67.1
+pymongo==4.15.2

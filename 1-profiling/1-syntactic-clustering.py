@@ -205,10 +205,10 @@ def cluster_datalake_schemas_verbose(base_path, distance_threshold=0.5, output_f
 # -------------------------------
 # Example usage
 # -------------------------------
-base_path = "/home/data/bronze"
+base_path = "/home/1-profiling/data/bronze"
 
 clusters = cluster_datalake_schemas_verbose(
     base_path,
     distance_threshold=0.7,
-    output_file="/home/data/silver/temp/cluster_schemas.json"
+    output_file="/home/1-profiling/data/silver/temp/cluster_schemas.json"
 )

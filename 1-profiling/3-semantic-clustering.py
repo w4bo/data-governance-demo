@@ -173,10 +173,10 @@ def semantic_file_clustering_jaccard(base_path, sim_threshold=0.7, distance_thre
 # Example usage
 # -------------------------------
 if __name__ == "__main__":
-    base_path = "/home/data/bronze"
+    base_path = "/home/1-profiling/data/bronze"
     clusters = semantic_file_clustering_jaccard(
         base_path,
         sim_threshold=0.6,
         distance_threshold=0.6,
-        output_file="/home/data/silver/temp-semantic/cluster_schemas.json"
+        output_file="/home/1-profiling/data/silver/temp-semantic/cluster_schemas.json"
     )

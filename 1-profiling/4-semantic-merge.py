@@ -155,10 +155,10 @@ def merge_clusters(cluster_file, output_dir="merged_clusters", threshold=0.7, al
 # Example usage
 # -------------------------------
 if __name__ == "__main__":
-    cluster_file = "/home/data/silver/temp-semantic/cluster_schemas.json"
+    cluster_file = "/home/1-profiling/data/silver/temp-semantic/cluster_schemas.json"
     merge_clusters(
         cluster_file,
-        output_dir="/home/data/silver/temp-semantic/unified_clusters",
+        output_dir="/home/1-profiling/data/silver/temp-semantic/unified_clusters",
         threshold=0.6,
         alpha=0  # more weight to semantic similarity
     )

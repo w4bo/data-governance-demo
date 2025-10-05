@@ -282,7 +282,7 @@ def create_mini_datalake_departments(
 # Example usage
 # ------------------------
 create_mini_datalake_departments(
-    "/home/data/bronze",
+    "/home/1-profiling/data/bronze",
     num_customers=20,
     split_v1=2,
     num_sales_chunks=5,
