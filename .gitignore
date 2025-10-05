@@ -3,6 +3,9 @@
 *.xlsx
 *.svg
 *.pdf
+*.jpg
+*.png
+*.pt
 
 
 # Created by https://www.toptal.com/developers/gitignore/api/venv,node,java,scala,macos,linux,gradle,python,windows,virtualenv,microsoftoffice

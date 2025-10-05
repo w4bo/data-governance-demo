@@ -87,6 +87,35 @@ def semantic_file_clustering_jaccard(base_path, sim_threshold=0.7, distance_thre
                 )
     dist_matrix = 1 - sim_matrix
 
+    df_dist = pd.DataFrame(
+        sim_matrix,
+        index=[os.path.basename(f) for f in files],
+        columns=[os.path.basename(f) for f in files]
+    )
+    print(df_dist.iloc[:, :6].to_markdown())
+
+    import matplotlib.pyplot as plt
+    from scipy.cluster.hierarchy import linkage, dendrogram
+    # Step 3.6: plot dendrogram
+    linked = linkage(dist_matrix, method="average")
+
+    plt.figure(figsize=(12, 6))
+    dendrogram(
+        linked,
+        labels=[os.path.basename(f) for f in files],
+        leaf_rotation=90,
+        leaf_font_size=10,
+        # color_threshold=0.3   # highlight early merges
+    )
+    plt.title("Agglomerative Clustering")
+    plt.xlabel("Files")
+    plt.ylabel("Distance")
+    plt.ylim([-0.1, 3])
+    plt.tight_layout()
+    plt.savefig("imgs/cluster_dendrogram-semantic.svg")
+    plt.savefig("imgs/cluster_dendrogram-semantic.pdf")
+    # plt.show()
+
     # Step 4: clustering
     clustering = AgglomerativeClustering(
         n_clusters=None,

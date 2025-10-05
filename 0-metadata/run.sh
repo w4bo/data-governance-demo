@@ -1,0 +1,1 @@
+python detect.py --input-dir yolo-imgs/ --output-dir ./out

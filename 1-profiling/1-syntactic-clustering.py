@@ -78,6 +78,7 @@ def jaccard_distance_matrix(schema_list):
             union = len(schema_list[i].union(schema_list[j]))
             sim = intersection / union if union > 0 else 1.0
             dist_matrix[i, j] = 1 - sim  # distance
+    
     return dist_matrix
 
 
@@ -116,6 +117,34 @@ def cluster_datalake_schemas_verbose(base_path, distance_threshold=0.5, output_f
 
     # Step 2: Compute Jaccard distance matrix
     dist_matrix = jaccard_distance_matrix(schema_list)
+
+    df_dist = pd.DataFrame(
+        1 - dist_matrix,
+        index=[os.path.basename(f) for f in file_paths],
+        columns=[os.path.basename(f) for f in file_paths]
+    )
+    print(df_dist.iloc[:, :6].to_markdown())
+
+    import matplotlib.pyplot as plt
+    from scipy.cluster.hierarchy import linkage, dendrogram
+    # Step 3.6: plot dendrogram
+    linked = linkage(1 - dist_matrix, method="average")
+
+    plt.figure(figsize=(12, 6))
+    dendrogram(
+        linked,
+        labels=[os.path.basename(f) for f in file_paths],
+        leaf_rotation=90,
+        leaf_font_size=10,
+        # color_threshold=0.3   # highlight early merges
+    )
+    plt.title("Agglomerative Clustering")
+    plt.xlabel("Files")
+    plt.ylabel("Distance")
+    plt.ylim([-0.1, 3])
+    plt.tight_layout()
+    plt.savefig("imgs/cluster_dendrogram.svg")
+    plt.savefig("imgs/cluster_dendrogram.pdf")
 
     # Step 3: Cluster schemas using hierarchical clustering
     clustering = AgglomerativeClustering(
