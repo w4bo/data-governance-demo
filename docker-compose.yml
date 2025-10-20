@@ -6,15 +6,16 @@ services:
     container_name: data-governance-demo
     volumes:
       - .:/home
+      - /var/run/docker.sock:/var/run/docker.sock
     command: "bash run-all.sh"
     depends_on:
       - mongodb
-    ports:
-      - "8080:8080"
+    # ports:
+    #   - "8080:8080"
+    #   - "8080:9002"
 
   mongodb:
     image: mongo:6
     container_name: mongodb
-    restart: always
     ports:
       - "27017:27017"

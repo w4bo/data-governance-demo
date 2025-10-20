@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 set -e  # stop on error
+# ./init.sh
 for dir in */; do
   if [ -f "$dir/run.sh" ]; then
     echo "Executing $dir/run.sh..."

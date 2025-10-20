@@ -24,4 +24,8 @@ RUN python3.13 -m pip install -r /home/requirements.txt
 ENV PATH="/home/.local/bin/:${PATH}"
 ENV PYTHONPATH="/home/:$PATH"
 ENV TZ="Europe/Rome"
+
+RUN curl -SL https://github.com/docker/compose/releases/download/v2.29.7/docker-compose-linux-x86_64 -o /usr/local/bin/docker-compose \
+ && chmod +x /usr/local/bin/docker-compose
+
 WORKDIR /home
