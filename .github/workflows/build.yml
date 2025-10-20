@@ -17,5 +17,6 @@ jobs:
 
       - name: Run Docker Compose
         run: |
+          find . -type f -name "*.sh" -exec chmod +x {} \;
           ./init.sh
           docker compose up --build --abort-on-container-exit
