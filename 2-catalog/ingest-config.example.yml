@@ -5,7 +5,7 @@ source:
 sink:
   type: "datahub-rest"
   config:
-    server: 'MYIP:8080'
+    server: 'http://MYIP:8080'
 
 # sink:
 #   type: file
