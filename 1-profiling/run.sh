@@ -5,5 +5,5 @@ rm -rf data/bronze || true
 rm -rf data/silver || true
 rm -rf data/gold || true
 for script in $(ls *.py | sort); do
-    python "$script"
+    python3.13 "$script"
 done

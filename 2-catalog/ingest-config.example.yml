@@ -1,0 +1,13 @@
+source:
+  type: demo-data
+  config: {}
+
+sink:
+  type: "datahub-rest"
+  config:
+    server: 'MYIP:8080'
+
+# sink:
+#   type: file
+#   config:
+#     filename: ./sample_mces.json

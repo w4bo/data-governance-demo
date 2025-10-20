@@ -20,3 +20,4 @@ ultralytics==8.3.204
 opencv-python==4.12.0.88
 tqdm==4.67.1
 pymongo==4.15.2
+acryl-datahub==1.3.0

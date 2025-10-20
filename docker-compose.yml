@@ -6,7 +6,7 @@ services:
     container_name: demo
     volumes:
       - .:/home
-    command: "bash /home/1-profiling/run.sh"
+    command: "bash run-all.sh"
     depends_on:
       - mongodb
     environment:
@@ -17,9 +17,4 @@ services:
     container_name: mongodb
     restart: always
     ports:
-      - "27017:27017"   # exposes MongoDB to host (optional)
-    volumes:
-      - mongo_data:/data/db
-
-volumes:
-  mongo_data:
+      - "27017:27017"
