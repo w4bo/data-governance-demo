@@ -16,4 +16,6 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Run Docker Compose
-        run: docker compose up --build --abort-on-container-exit
+        run: |
+          ./init.sh
+          docker compose up --build --abort-on-container-exit
