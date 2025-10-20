@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -exo
 
+find . -type f -name "*.sh" -exec chmod +x {} \;
+
 ip=$(hostname -I | awk '{print $1}')
 
 if [ -z "$ip" ]; then
