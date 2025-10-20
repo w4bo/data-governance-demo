@@ -9,6 +9,8 @@ services:
     command: "bash run-all.sh"
     depends_on:
       - mongodb
+    ports:
+      - "8080:8080"
 
   mongodb:
     image: mongo:6
