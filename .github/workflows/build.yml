@@ -28,4 +28,4 @@ jobs:
         run: |
           find . -type f -name "*.sh" -exec chmod +x {} \;
           ./init.sh
-          docker compose --env-file ./config/myenvfile.env up --build --abort-on-container-exit
+          docker compose --env-file .env up --build --abort-on-container-exit
