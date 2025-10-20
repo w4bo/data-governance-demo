@@ -1,9 +1,9 @@
 services:
-  demo:
+  data-governance-demo:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: demo
+    container_name: data-governance-demo
     volumes:
       - .:/home
     command: "bash run-all.sh"

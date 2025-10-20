@@ -12,4 +12,4 @@ fi
 
 echo "Detected IP: $ip"
 sed "s/MYIP/$ip/g" 2-catalog/ingest-config.example.yml > 2-catalog/ingest-config.yml
-echo "Created ingest-config.yml with IP $ip"
+sed "s/MYIP/\"$ip\"/g" .env.example > .env
