@@ -9,8 +9,6 @@ services:
     command: "bash run-all.sh"
     depends_on:
       - mongodb
-    environment:
-      - MONGO_URI=mongodb://mongodb:27017/db
 
   mongodb:
     image: mongo:6
