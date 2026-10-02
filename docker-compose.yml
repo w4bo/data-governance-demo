@@ -4,15 +4,12 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: data-governance-demo
-    volumes:
-      - .:/home
-      - /var/run/docker.sock:/var/run/docker.sock
     command: "bash run-all.sh"
     depends_on:
-      - mongodb
-    # ports:
-    #   - "8080:8080"
-    #   - "8080:9002"
+      mongodb:
+        condition: service_started
+      neo4j:
+        condition: service_started
 
   mongodb:
     image: mongo:6
@@ -23,7 +20,7 @@ services:
   neo4j:
     image: neo4j:latest
     environment:
-        - NEO4J_AUTH=neo4j/password
+      - NEO4J_AUTH=neo4j/password
     ports:
       - "7474:7474"
       - "7687:7687"

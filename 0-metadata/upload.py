@@ -5,8 +5,8 @@ from dotenv import load_dotenv
 # Load .env from the parent folder
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", ".env"))
 
-# Get Mongo URI from environment
-mongo_uri = f"mongodb://{os.getenv("IP")}:27017/db"
+mongo_host = os.getenv("MONGO_HOST", os.getenv("IP", "mongodb"))
+mongo_uri = f"mongodb://{mongo_host}:27017/db"
 if not mongo_uri:
     raise ValueError("MONGO_URI not set in .env")
 

@@ -1,0 +1,15 @@
+.git/
+.github/
+.devcontainer/
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+0-metadata/imgs/
+0-metadata/out/
+0-metadata/*.pt
+1-profiling/data/
+1-profiling/imgs/

@@ -1,4 +1,3 @@
-acryl-datahub==1.3.0
 matplotlib==3.10.3
 mdpdf==0.0.18
 notebook==7.4.4
