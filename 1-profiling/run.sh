@@ -1,6 +1,7 @@
 #!/bin/bash
 set -exo
 cd /home/1-profiling
+mkdir -p imgs
 rm -rf data/bronze || true
 rm -rf data/silver || true
 rm -rf data/gold || true
