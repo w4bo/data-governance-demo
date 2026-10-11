@@ -4,7 +4,7 @@ notebook==7.4.4
 neo4j==6.0.2
 openpyxl==3.1.5
 opencv-python==4.12.0.88
-pandas==2.3.1
+pandas==2.3.3
 PyPDF2==3.0.1
 pymongo==4.15.2
 python-dotenv==1.1.1
