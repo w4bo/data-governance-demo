@@ -11,7 +11,7 @@ python-dotenv==1.1.1
 pytz==2025.2
 rapidfuzz==3.14.0
 requests==2.32.4
-scikit-learn==1.7.1
+scikit-learn==1.9.1
 scipy==1.16.1
 seaborn==0.13.2
 sentence_transformers==5.1.0
