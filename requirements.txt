@@ -1,6 +1,6 @@
 matplotlib==3.10.3
 mdpdf==0.0.18
-notebook==7.4.4
+notebook==7.5.6
 neo4j==6.0.2
 openpyxl==3.1.5
 opencv-python==4.12.0.88
