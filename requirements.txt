@@ -1,4 +1,4 @@
-matplotlib==3.10.3
+matplotlib==3.11.2
 mdpdf==0.0.18
 notebook==7.4.4
 neo4j==6.0.2
