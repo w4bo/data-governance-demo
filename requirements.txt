@@ -8,7 +8,7 @@ pandas==2.3.3
 PyPDF2==3.0.1
 pymongo==4.19.0
 python-dotenv==1.2.4
-pytz==2025.2
+pytz==2026.5
 rapidfuzz==3.14.6
 requests==2.34.2
 scikit-learn==1.9.1
