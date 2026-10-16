@@ -10,7 +10,7 @@ pymongo==4.19.0
 python-dotenv==1.2.4
 pytz==2025.2
 rapidfuzz==3.14.6
-requests==2.33.1
+requests==2.34.2
 scikit-learn==1.7.2
 scipy==1.16.3
 seaborn==0.13.2
