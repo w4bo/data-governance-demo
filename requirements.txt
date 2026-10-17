@@ -17,7 +17,7 @@ seaborn==0.13.2
 sentence_transformers==5.7.0
 six==1.17.0
 tabulate==0.10.0
-tqdm==4.67.3
+tqdm==4.70.1
 ultralytics==8.3.253
 urllib3==2.8.0
 xlrd==2.0.2
