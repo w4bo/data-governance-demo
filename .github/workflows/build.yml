@@ -10,7 +10,7 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Maximize build space
         uses: AdityaGarg8/remove-unwanted-software@v4.1
