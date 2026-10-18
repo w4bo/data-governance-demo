@@ -14,7 +14,7 @@ requests==2.34.2
 scikit-learn==1.9.1
 scipy==1.18.1
 seaborn==0.13.2
-sentence_transformers==5.7.0
+sentence_transformers==6.1.0
 six==1.17.0
 tabulate==0.10.0
 tqdm==4.70.1
