@@ -1,5 +1,5 @@
 # FROM python:3.13-slim
-FROM ubuntu:24.04
+FROM ubuntu:26.04
 
 RUN mkdir -p /home
 COPY ./requirements.txt  /home/
