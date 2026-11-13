@@ -6,7 +6,7 @@ openpyxl==3.1.5
 opencv-python==5.0.0.93
 pandas==3.1.1
 PyPDF2==3.0.1
-pymongo==4.19.0
+pymongo==4.20.0
 python-dotenv==1.2.4
 pytz==2026.6
 rapidfuzz==3.14.6
